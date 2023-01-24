@@ -1,5 +1,5 @@
 name: pks-0637-psf-check
-sub_name: psf-marx
+sub_name: psf-marx-no-pileup
 path_data: data
 obs_ids:
 - 19692
