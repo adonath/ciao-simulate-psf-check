@@ -1,0 +1,31 @@
+# Conda environment
+#
+# Install:    conda env create -f environment.yml
+# Update:     conda env update -f environment.yml
+# Activate:   conda activate simulate-psf-check
+# Deactivate: conda deactivate
+
+name: simulate-psf-check
+
+channels:
+  - conda-forge
+  - https://cxc.cfa.harvard.edu/conda/ciao
+  - anaconda
+
+variables:
+  PYTHONNOUSERSITE: "1"
+  CONDA_SUBDIR: osx-64
+
+dependencies:
+  - python=3.9
+  - ciao=4.14
+  - sherpa=4.14
+  - ciao-contrib
+  - caldb_main
+  - marx
+  - pip
+  - gammapy
+  - astropy
+  - numpy<1.24
+  - scipy
+  - matplotlib
