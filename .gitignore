@@ -1,2 +1,5 @@
 *.fits
 *.fits.gz
+data/
+psf-marx-no-pileup/
+psf-saotrace-no-pileup/
