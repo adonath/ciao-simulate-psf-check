@@ -1,1 +1,1 @@
-# CIAO's `simulate_psf` Check
+# CIAO's Simluate PSF Check
