@@ -3,13 +3,16 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 from astropy.coordinates import Angle, SkyCoord
-
 from gammapy.estimators import ImageProfileEstimator
 from gammapy.estimators.utils import find_peaks
 from gammapy.maps import Map
+from gpxray.chandra.config import ChandraConfig
+
+PATH_BASE = Path(__file__).parent
 
 
 def measure_radial_profile(filename, threshold):
+    """Measure radial profile of a map."""
     data = Map.read(filename)
     x_edges = Angle(np.linspace(0, 6, 60), "arcsec")
 
@@ -22,6 +25,21 @@ def measure_radial_profile(filename, threshold):
 
     profile = est.run(data)
     return profile.normalize("integral")
+
+
+def measure_radial_profiles():
+    filenames = PATH_BASE.glob("config*.yaml")
+
+    for filename in filenames:
+        config = ChandraConfig.read(filename)
+
+        path = PATH_BASE / f"{config.sub_name}" / f"{config.obs_id_ref}"
+
+        for filename_psf in path.glob("psf-*.fits.gz"):
+            profile = measure_radial_profile(filename_psf, threshold=100)
+            profile.write(
+                PATH_BASE / "results/profiles" / f"{filename.stem}-profile.fits.gz"
+            )
 
 
 def plot_profiles():
