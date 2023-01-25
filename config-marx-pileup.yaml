@@ -23,6 +23,7 @@ irfs:
             numsig: 7
             blur: 0.07
             pileup: true
+            extended: false
     pks-0637-marx-pileup-blur-0.115:
         psf:
             minsize: 128
@@ -30,6 +31,7 @@ irfs:
             numsig: 7
             blur: 0.115
             pileup: true
+            extended: false
     pks-0637-marx-pileup-blur-0.16:
         psf:
             minsize: 128
@@ -37,6 +39,7 @@ irfs:
             numsig: 7
             blur: 0.16
             pileup: true
+            extended: false
     pks-0637-marx-pileup-blur-0.205:
         psf:
             minsize: 128
@@ -44,6 +47,7 @@ irfs:
             numsig: 7
             blur: 0.205
             pileup: true
+            extended: false
     pks-0637-marx-pileup-blur-0.25:
         psf:
             minsize: 128
@@ -51,6 +55,7 @@ irfs:
             numsig: 7
             blur: 0.25
             pileup: true
+            extended: false
 ciao:
     chandra_repro:
         pix_adj: none
