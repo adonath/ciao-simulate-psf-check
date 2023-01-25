@@ -1,0 +1,56 @@
+name: pks-0637-psf-check
+sub_name: psf-marx-pileup
+path_data: data
+obs_ids:
+- 19692
+obs_id_ref: 19692
+roi:
+    center:
+        frame: icrs
+        lon: 6h35m46.50793015s
+        lat: -75d16m16.81641826s
+    width: 5arcsec
+    bin_size: 0.25
+    energy_range:
+        min: 0.5 keV
+        max: 7.0 keV
+psf_simulator: marx
+irfs:
+    pks-0637-marx-pileup-blur-0.07:
+        psf:
+            minsize: 128
+            numiter: 20
+            numsig: 7
+            blur: 0.07
+            pileup: true
+    pks-0637-marx-pileup-blur-0.115:
+        psf:
+            minsize: 128
+            numiter: 20
+            numsig: 7
+            blur: 0.115
+            pileup: true
+    pks-0637-marx-pileup-blur-0.16:
+        psf:
+            minsize: 128
+            numiter: 20
+            numsig: 7
+            blur: 0.16
+            pileup: true
+    pks-0637-marx-pileup-blur-0.205:
+        psf:
+            minsize: 128
+            numiter: 20
+            numsig: 7
+            blur: 0.205
+            pileup: true
+    pks-0637-marx-pileup-blur-0.25:
+        psf:
+            minsize: 128
+            numiter: 20
+            numsig: 7
+            blur: 0.25
+            pileup: true
+ciao:
+    chandra_repro:
+        pix_adj: none
