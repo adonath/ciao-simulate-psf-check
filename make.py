@@ -44,7 +44,7 @@ def read_profile(filename):
 def measure_radial_profiles():
     """Measure radial profiles for all PSF maps in the data folder."""
     path_results = PATH_BASE / "results/profiles"
-    path_results.mkdir(exist_ok=True)
+    path_results.mkdir(exist_ok=True, parents=True)
 
     filenames = PATH_BASE.glob("config*.yaml")
 
