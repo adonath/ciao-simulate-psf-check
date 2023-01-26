@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.INFO)
 PATH_BASE = Path(__file__).parent
 
 
-def measure_radial_profile(filename, threshold=0.01):
+def measure_radial_profile(filename, threshold=0.001):
     """Measure radial profile of a map."""
     log.info(f"Reading {filename}")
     map_ = Map.read(filename)
@@ -101,7 +101,7 @@ def plot_profiles(filenames, title):
     ax.set_yscale("log")
     ax.set_xlabel("Offset / arcsec")
     ax.set_ylabel("Profile / A.U.")
-    plt.legend()
+    plt.legend(ncols=3, fontsize=8)
 
     filename = path_figures / f"{title}.png"
     log.info(f"Writing {filename}")
@@ -144,6 +144,6 @@ def plot_images():
 
 
 if __name__ == "__main__":
-    measure_radial_profiles()
+    # measure_radial_profiles()
     plot_marx_vs_saotrace()
     # plot_images()
