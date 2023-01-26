@@ -77,7 +77,7 @@ def plot_profiles(filenames, title):
     path_figures.mkdir(exist_ok=True)
 
     fig = plt.figure(figsize=(12, 8))
-    ax = plt.subplot()
+    ax = fig.add_axes([0.08, 0.08, 0.88, 0.88])
 
     profile_counts = read_profile("results/profiles/counts-profile.fits.gz")
     profile_counts.plot(ax=ax, label="Counts profile", lw=2)
