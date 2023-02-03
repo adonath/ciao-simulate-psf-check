@@ -17,30 +17,40 @@ roi:
 psf_simulator: marx
 irfs:
     pks-0637-marx-no-pileup-blur-0.07:
+        spectrum:
+            background_region_file: bkg-region.reg 
         psf:
             minsize: 128
             numiter: 20
             numsig: 7
             blur: 0.07
     pks-0637-marx-no-pileup-blur-0.115:
+        spectrum:
+            background_region_file: bkg-region.reg 
         psf:
             minsize: 128
             numiter: 20
             numsig: 7
             blur: 0.115
     pks-0637-marx-no-pileup-blur-0.16:
+        spectrum:
+            background_region_file: bkg-region.reg 
         psf:
             minsize: 128
             numiter: 20
             numsig: 7
             blur: 0.16
     pks-0637-marx-no-pileup-blur-0.205:
+        spectrum:
+            background_region_file: bkg-region.reg 
         psf:
             minsize: 128
             numiter: 20
             numsig: 7
             blur: 0.205
     pks-0637-marx-no-pileup-blur-0.25:
+        spectrum:
+            background_region_file: bkg-region.reg 
         psf:
             minsize: 128
             numiter: 20

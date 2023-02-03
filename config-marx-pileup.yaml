@@ -17,6 +17,8 @@ roi:
 psf_simulator: marx
 irfs:
     pks-0637-marx-pileup-blur-0.07:
+        spectrum:
+            background_region_file: bkg-region.reg 
         psf:
             minsize: 128
             numiter: 20
@@ -25,6 +27,8 @@ irfs:
             pileup: true
             extended: false
     pks-0637-marx-pileup-blur-0.115:
+        spectrum:
+            background_region_file: bkg-region.reg 
         psf:
             minsize: 128
             numiter: 20
@@ -33,6 +37,8 @@ irfs:
             pileup: true
             extended: false
     pks-0637-marx-pileup-blur-0.16:
+        spectrum:
+            background_region_file: bkg-region.reg 
         psf:
             minsize: 128
             numiter: 20
@@ -41,6 +47,8 @@ irfs:
             pileup: true
             extended: false
     pks-0637-marx-pileup-blur-0.205:
+        spectrum:
+            background_region_file: bkg-region.reg 
         psf:
             minsize: 128
             numiter: 20
@@ -49,6 +57,8 @@ irfs:
             pileup: true
             extended: false
     pks-0637-marx-pileup-blur-0.25:
+        spectrum:
+            background_region_file: bkg-region.reg 
         psf:
             minsize: 128
             numiter: 20
